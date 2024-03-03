@@ -12,7 +12,7 @@ const Formm = ({ stop_propagate,hideModal })=>{
 
     const emailInTheURL = window.location.href;
     const sliceEqualSign = emailInTheURL.indexOf("=");
-    const e = emailInTheURL.substr((sliceEqualSign+1));
+    const e = emailInTheURL.substr((sliceEqualSign+1)).split('&', 1).toString();
 
     const [email, setEmail] = useState(e);
     // setEmail(email);
